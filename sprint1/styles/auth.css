@@ -89,8 +89,23 @@ input::placeholder {
   text-underline-offset: 2px;
 }
 
+input-error {
+  outline: 2.5px solid var(--red);
+}
+
 .error-color {
   color: var(--red);
+  display: block;
+  margin: 8px 0 0 16px;
+}
+
+.button-activated {
+  cursor: pointer;
+  background-color: var(--blue);
+}
+
+.button-activated:hover {
+  background-color: #1251aa;
 }
 
 @media (min-width: 768px) {

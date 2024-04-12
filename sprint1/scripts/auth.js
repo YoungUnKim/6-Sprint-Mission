@@ -7,7 +7,7 @@ const message = document.createElement('p');
 message.classList.add('error-color');
 
 function addErrorMessage(el, msg) {
-  el.classList.add('error');
+  el.classList.add('input-error');
   message.textContent = msg;
   el.after(message);
 }
@@ -50,6 +50,38 @@ function resetInput(e) {
   }
 }
 
+function activateLogInButton(e) {
+  const condition =
+    !inputEmail.classList.contains('error-color') &&
+    !inputPassword.classList.contains('error-color') &&
+    inputEmail.value &&
+    inputPassword.value;
+
+  formButton.classList.toggle('button-activated', condition);
+  condition ? (formButton.disabled = false) : (formButton.disabled = true);
+}
+
+function activateSignUpButton(e) {
+  const condition =
+    !inputEmail.classList.contains('error-color') &&
+    !inputNickname.classList.contains('error-color') &&
+    !inputPassword.classList.contains('error-color') &&
+    !inputPasswordConfirm.classList.contains('error-color') &&
+    inputEmail.value &&
+    inputNickname.value &&
+    inputPassword.value &&
+    inputPasswordConfirm.value;
+
+  formButton.classList.toggle('button-activated', condition);
+  condition ? (formButton.disabled = false) : (formButton.disabled = true);
+}
+
+function buttonVisibleOrNot(e) {
+  const input = e.target.parentElement.nextElementSibling;
+  if (input.type === 'password') {
+  }
+}
+
 export {
   email,
   password,
@@ -60,4 +92,7 @@ export {
   nicknameCheck,
   passwordConfirmCheck,
   resetInput,
+  activateLogInButton,
+  activateSignUpButton,
+  buttonVisibleOrNot,
 };
