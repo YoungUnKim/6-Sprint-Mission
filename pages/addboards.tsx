@@ -1,4 +1,21 @@
-const AddBoard = () => {
+import { useState } from 'react';
+export interface IBoardValues {
+  title: string;
+  content: string;
+  imgFile: string | null;
+}
+
+export default function AddBoard() {
+  const [values, setValues] = useState<IBoardValues>({
+    title: '',
+    content: '',
+    imgFile: null,
+  });
+
+  function onChangeValues(key: keyof IBoardValues, value: string) {
+    setValues(prevValues => ({ ...prevValues, [key]: value }));
+  }
+
   return (
     <div>
       <form>
@@ -14,6 +31,4 @@ const AddBoard = () => {
       </form>
     </div>
   );
-};
-
-export default AddBoard;
+}
