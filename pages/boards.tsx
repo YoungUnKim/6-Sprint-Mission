@@ -6,7 +6,7 @@ import styles from '@/styles/Board.module.css';
 import LinkButton from '@/utils/Button';
 import Dropdown from '@/components/DropDown';
 import { useEffect, useState } from 'react';
-import axios from '@/utils/axio';
+import axios from '@/utils/axios';
 
 interface List {
   id: number;
@@ -89,7 +89,7 @@ export default function Board({ PostsData }: Props) {
       <div className={styles.posts}>
         <div className={styles.postsTop}>
           <span className={styles.bestTopText}>게시글</span>
-          <LinkButton href="/">글쓰기</LinkButton>
+          <LinkButton href="/addboard">글쓰기</LinkButton>
         </div>
         <div className={styles.postsMiddle}>
           <SearchInput value={searchTerm} onChange={handleSearchChange} />

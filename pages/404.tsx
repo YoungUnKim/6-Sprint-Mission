@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import IMG_NOTFOUND from '@/public/img-notfound.svg';
+import IMG_NOTFOUND from '@/public/icon/404.png';
 
 export default function NotFound() {
   return (
