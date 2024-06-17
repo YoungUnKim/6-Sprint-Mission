@@ -1,4 +1,4 @@
-import axios from '@/utils/axio';
+import axios from '@/utils/axios';
 import { useEffect, useState } from 'react';
 import style from '@/styles/bestPost.module.css';
 import bestBadge from '@/public/icon/img_badge.svg';
