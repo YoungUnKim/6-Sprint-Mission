@@ -27,21 +27,21 @@ interface PostsProps {
 export default function Posts({ posts }: PostsProps) {
   return (
     <Link href={`/borads/${posts.id}`}>
-      <div key={posts.id} className={styles.postContainer}>
-        <div className={styles.postsTop}>
-          <span className={styles.postsTitle}>{posts.title}</span>
+      <div key={posts.id} className={styles.post_container}>
+        <div className={styles.posts_top}>
+          <span className={styles.posts_title}>{posts.title}</span>
           {posts.image && <Image width={72} height={72} alt="이미지" src={posts.image} />}
         </div>
-        <div className={styles.postsBottom}>
-          <div className={styles.BestInfoFirst}>
+        <div className={styles.posts_bottom}>
+          <div className={styles.best_info_first}>
             <Image width={24} height={24} alt="프로필사진" src={user_icon} />
-            <span className={styles.Writer}>{posts.writer.nickname}</span>
+            <span className={styles.writer}>{posts.writer.nickname}</span>
             <span className={styles.times}>{timeString(posts.createdAt)}</span>
           </div>
           <div>
-            <div className={styles.BestInfoHeart}>
+            <div className={styles.best_info_heart}>
               <Image width={16} height={16} alt="하트" src={heartImg} />
-              <span className={styles.LikeCount}>{posts.likeCount}</span>
+              <span className={styles.like_count}>{posts.likeCount}</span>
             </div>
           </div>
         </div>

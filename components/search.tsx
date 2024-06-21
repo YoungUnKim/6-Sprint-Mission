@@ -9,14 +9,14 @@ interface SearchInputProps {
 
 export default function SearchInput({ value, onChange }: SearchInputProps) {
   return (
-    <div className={styles.SearchContainer}>
-      <Image width={15} height={15} src={searchIC} alt="검색 아이콘" className={styles.SearchIcon} />
+    <div className={styles.search_container}>
+      <Image width={15} height={15} src={searchIC} alt="검색 아이콘" className={styles.search_icon} />
       <input
         type="text"
         placeholder="검색할 상품을 입력해주세요"
         value={value}
         onChange={onChange}
-        className={styles.SearchInput}
+        className={styles.search_input}
       />
     </div>
   );
