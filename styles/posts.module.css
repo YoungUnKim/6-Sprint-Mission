@@ -1,4 +1,4 @@
-.postContainer {
+.post_container {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -9,48 +9,48 @@
   border-bottom: 1px solid #e5e7eb;
 }
 
-.postsTitle {
+.posts_title {
   font-weight: 600;
   font-size: 20px;
   color: #1f2937;
 }
 
-.postsTop {
+.posts_top {
   display: flex;
   justify-content: space-between;
 }
 
-.postsBottom {
+.posts_bottom {
   display: flex;
   justify-content: space-between;
 }
 
-.BestInfo {
+.best_info {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
-.BestInfoFirst {
+.best_info_first {
   display: flex;
   gap: 10px;
   align-items: center;
 }
 
-.BestInfoHeart {
+.best_info_heart {
   display: flex;
   align-items: center;
   gap: 5px;
   justify-content: center;
 }
 
-.Writer {
+.writer {
   font-size: 14px;
   font-weight: 400;
   color: #4b5563;
 }
 
-.LikeCount {
+.like_count {
   font-size: 14px;
   font-weight: 400;
   color: #6b7280;
