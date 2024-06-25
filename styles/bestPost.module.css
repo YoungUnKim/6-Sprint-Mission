@@ -1,4 +1,4 @@
-.BestContainer {
+.best_container {
   width: 384px;
   height: 169px;
   border-radius: 8px;
@@ -11,47 +11,47 @@
   position: relative;
 }
 
-.BestBadge {
+.best_badge {
   padding-bottom: 10px;
 }
 
-.BestTitle {
+.best_title {
   display: flex;
   justify-content: space-between;
 }
 
-.BestTitleText {
+.best_title_text {
   font-weight: 600;
   font-size: 20px;
   color: #1f2937;
 }
 
-.BestInfo {
+.best_info {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
-.BestInfoFirst {
+.best_info_first {
   display: flex;
   gap: 10px;
   align-items: center;
 }
 
-.BestInfoHeart {
+.best_info_heart {
   display: flex;
   align-items: center;
   gap: 5px;
   justify-content: center;
 }
 
-.Writer {
+.writer {
   font-size: 14px;
   font-weight: 400;
   color: #4b5563;
 }
 
-.LikeCount {
+.like_count {
   font-size: 14px;
   font-weight: 400;
   color: #6b7280;

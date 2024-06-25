@@ -2,7 +2,7 @@ import { useState } from 'react';
 import styles from '@/styles/Addboard.module.css';
 import PlusIcon from '@/public/icon/ic_plus.svg';
 
-export interface IBoardValues {
+interface IBoardValues {
   title: string;
   content: string;
   imgFile: string | null;
@@ -20,29 +20,29 @@ export default function AddBoard() {
   }
 
   return (
-    <div className={styles.BoardContainer}>
-      <form className={styles.AddContainer}>
-        <div className={styles.addTop}>
-          <h1 className={styles.addTopText}>게시글 쓰기</h1>
+    <div className={styles.board_container}>
+      <form className={styles.add_container}>
+        <div className={styles.add_top}>
+          <h1 className={styles.add_top_text}>게시글 쓰기</h1>
           <button className={styles.button} type="submit">
             등록
           </button>
         </div>
-        <div className={styles.postContainer}>
-          <div className={styles.inputTitleBox}>
-            <label htmlFor="title" className={styles.inputText}>
+        <div className={styles.post_container}>
+          <div className={styles.input_title_box}>
+            <label htmlFor="title" className={styles.input_text}>
               *제목
             </label>
-            <input id="title" className={styles.TitleInput} type="text" placeholder="제목을 입력해주세요" />
+            <input id="title" className={styles.title_input} type="text" placeholder="제목을 입력해주세요" />
           </div>
-          <div className={styles.inputTextBox}>
-            <label htmlFor="text" className={styles.inputText}>
+          <div className={styles.input_text_box}>
+            <label htmlFor="text" className={styles.input_text}>
               *내용
             </label>
-            <textarea id="text" className={styles.TextInput} placeholder="내용을 입력해주세요"></textarea>
+            <textarea id="text" className={styles.text_input} placeholder="내용을 입력해주세요"></textarea>
           </div>
-          <div className={styles.inputTextBox}>
-            <label htmlFor="picture" className={styles.inputText}>
+          <div className={styles.input_text_box}>
+            <label htmlFor="picture" className={styles.input_text}>
               이미지
             </label>
             <div className={styles.image_button_area}>
@@ -52,7 +52,7 @@ export default function AddBoard() {
               </label>
               <input id="picture" type="file" style={{ display: 'none' }} />
               <div>
-                <button>X</button>
+                <button type="button">X</button>
               </div>
             </div>
           </div>

@@ -79,23 +79,23 @@ export default function Board({ PostsData }: Props) {
   }, [order, PostsData]);
 
   return (
-    <div className={styles.BoardContainer}>
-      <div className={styles.bestContainer}>
-        <span className={styles.bestTopText}>베스트 게시글</span>
-        <div className={styles.bestPosts}>
+    <div className={styles.board_container}>
+      <div className={styles.best_container}>
+        <span className={styles.best_top_text}>베스트 게시글</span>
+        <div className={styles.best_posts}>
           <BestPost />
         </div>
       </div>
       <div className={styles.posts}>
-        <div className={styles.postsTop}>
-          <span className={styles.bestTopText}>게시글</span>
+        <div className={styles.posts_top}>
+          <span className={styles.best_top_text}>게시글</span>
           <LinkButton href="/addboard">글쓰기</LinkButton>
         </div>
-        <div className={styles.postsMiddle}>
+        <div className={styles.posts_middle}>
           <SearchInput value={searchTerm} onChange={handleSearchChange} />
           <Dropdown onChange={handleSortOrderChange} />
         </div>
-        <div className={styles.postsContainer}>
+        <div className={styles.posts_container}>
           {filteredData.map(post => (
             <Posts key={post.id} posts={post} />
           ))}
